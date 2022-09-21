@@ -1,3 +1,5 @@
 train:
-  activation:
-    _target_: torch.nn.ReLU
+  optimizer:
+    _partial_: True
+    _target_: torch.optim.Adam
+    lr: 0.001
