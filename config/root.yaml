@@ -1,4 +1,0 @@
-train:
-  enc_hid_size: 256
-  dec_hid_size: ${train.enc_hid_size}
-  vocab_size: ???
