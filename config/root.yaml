@@ -1,3 +1,5 @@
 train:
-  activation:
+  dummy:
     _target_: trainer.dummy.DummyTrainer
+    dummy2:
+      _target_: trainer.dummy2.DummyTrainer2
