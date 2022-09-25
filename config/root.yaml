@@ -1,2 +1,12 @@
 defaults:
-  - exp: small
+  - train: small
+  - data: small
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+  - _self_
+
+
+# All the base arguments
+seed: 10
+cuda: True
+exp_num: 0

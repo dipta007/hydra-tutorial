@@ -1,6 +1,4 @@
+# @package _global_
 defaults:
-  - base_exp
-
-train:
-  enc_hid_size: 512
-  dec_hid_size: 512
+  - override /train: big
+  - override /data: big

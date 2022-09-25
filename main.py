@@ -1,8 +1,15 @@
 import hydra
+import json
+import omegaconf
 
-@hydra.main(version_base=None, config_path="config")
+import logging
+log = logging.getLogger(__name__)
+
+@hydra.main(version_base=None, config_path="config", config_name='root')
 def my_app(cfg):
-    print(cfg)
+    config = omegaconf.OmegaConf.to_container(cfg, resolve=True, throw_on_missing=True)
+    config = dict(config)
+    log.info(json.dumps(config, indent=2))
 
 if __name__ == "__main__":
     my_app()
