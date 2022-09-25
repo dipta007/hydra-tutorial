@@ -1,11 +1,13 @@
 import hydra
-import torch
 
 @hydra.main(version_base=None, config_path="config", config_name="root")
 def my_app(cfg):
-    model = torch.nn.Linear(10, 2)
-    optimizer = hydra.utils.instantiate(cfg.train.optimizer)(model.parameters())
-    print(type(optimizer))
+    print(cfg.train.enc_hid_size)
+    print(cfg['train']['enc_hid_size'])
+    print(cfg.train.dec_hid_size)
+
+    cfg.train.vocab_size = 40000
+    print(cfg.train.vocab_size)
 
 if __name__ == "__main__":
     my_app()
