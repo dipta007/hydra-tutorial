@@ -1,3 +1,6 @@
+defaults:
+  - base_exp
+
 train:
   enc_hid_size: 512
   dec_hid_size: 512
