@@ -1,7 +1,7 @@
 defaults:
   - base_train
 
-train:
+model:
   enc_hid_size: 32
   dec_hid_size: 32
   lr: 0.1
